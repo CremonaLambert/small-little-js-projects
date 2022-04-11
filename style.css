@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.bar {
+    background-color: #000a12;
+    color: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+
+}
+
+.pages {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.pages a {
+    text-decoration: none;
+    color: #fafafa;
+    padding-left: 20px;
+    display: block;
+    transition: all 0.3s ease-out;
+}
+
+.pages a:hover {
+    color: #81d4fa;
+    transform: rotate(2deg);
+}
+
+footer {
+   /* background-color: #000a12;
+    color: #fff;*/
+}
