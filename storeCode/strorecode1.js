@@ -107,6 +107,225 @@ const firstPosts = [
 
 
 
+//-------start-----likes-----------------------------------------------
+
+// console.table(firstPosts);
+// const higerToLowerLikes = firstPosts.sort((a, b) => b.likes - a.likes);
+// console.table(higerToLowerLikes);
+
+// let twoBestlikes = higerToLowerLikes.slice(0,2);
+// console.table(twoBestlikes);
+
+// const listOfLikes = twoBestlikes.map(function(jAime){
+//     return jAime.university;
+// })
+// console.log(listOfLikes)
+
+// let univByLikes = listOfLikes.map(Element => Element).join("-");
+// console.log(univByLikes);
+//--------------------End------likes------------------------------------------
+
+//---------------------------------start----comments------------------------------------------------
+// const higerToLowerComments = firstPosts.sort((a, b) => b.comments - a.comments);
+// console.log(higerToLowerComments);
+// console.table(higerToLowerComments);
+
+// let threeBestComments = higerToLowerComments.slice(0, 3);
+// console.log(threeBestComments);
+// console.table(threeBestComments);
+// const voir = threeBestComments.map(function(univ){
+//     return univ.university;
+// });
+// console.log(voir)
+// const fulluniv = voir.map(Element => Element).join("-");
+// console.log(fulluniv);
+
+//------------------------------------End------comments--------------------
+
+
+//------------start ------likes of the 10 univ---------------------------------
+
+// const higerToLower10likes = firstPosts.sort((a, b) => b.likes - a.likes);
+// console.log(higerToLower10likes);
+// console.table(higerToLower10likes);
+// let tenAvelLikes = higerToLower10likes.slice(0,10);
+// console.log(tenAvelLikes)
+
+// const arr10likes = tenAvelLikes.map(function(aime){
+//     return aime.university;
+// });
+// console.log(arr10likes)
+
+// const tenlikes = arr10likes.sort(Element => Element).join("-");
+// console.log(tenlikes)
+
+//---------------End ot the 10 likes------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const allLikes = firstPosts.filter(function(jAime){
+//     if(typeof jAime.likes === "number"){
+//         return true;
+//     }
+// });
+// console.log(allLikes)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // const allLikes = firstPosts.map(function(jAime){
+            //     return jAime.likes;
+            // });
+            // console.log(allLikes);
+
+            // let higerToLowerLikes = allLikes.sort((a, b) => b - a);
+            // console.log(higerToLowerLikes);
+            
+            // let twoBestlikes = higerToLowerLikes.slice(0,2);
+            // console.log(twoBestlikes);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// create list of all the likes 
+
+// const allLikes = firstPosts.map(function(jAime){
+//  return jAime.likes;
+// });
+// console.log(allLikes)
+
+// let newCopy = [0];
+
+// for (i = 0; i < allLikes.length; i++) {
+//     newCopy[i] = allLikes[i];
+// }
+// console.log(newCopy)
+
+// let largest = Math.max.apply(Math, newCopy);
+// console.log(largest)
+
+// newCopy.splice(newCopy.indexOf(largest), 1);
+
+// Secondelargest = Math.max.apply(Math, newCopy);
+// console.log(Secondelargest);
+
+
+
+
+//to reverse it just play with b and a  (important)  <---------
+// const ages = [33,12,20,16,5,54,21,44,61,13,15,45,25,64,32];
+// const sortByAges = ages.sort((a, b) => b - a);
+// console.log(sortByAges);
+// let n = sortByAges.slice(0,2);
+// console.log(n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function topNposts(n, field, posts) {
+
+//     const allLikes = firstPosts.map(function(jAime){
+//         return jAime.likes;
+//     });
+//     console.log(allLikes);
+
+//     let higerToLowerLikes = allLikes.sort((a, b) => b - a);
+//     console.log(higerToLowerLikes);
+    
+//     let twoBestlikes = higerToLowerLikes.slice(0,2);
+//     console.log(twoBestlikes);
+
+
+// };
+// console.log();
+
+
+
 
 
 
