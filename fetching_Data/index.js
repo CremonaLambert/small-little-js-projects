@@ -26,12 +26,12 @@ function showUnivData(innerContainerDiv){
 imageContainer.className = 'image_container';
 
 const image = document.createElement('img');
-image.src = './nust.png';
-image.alt = 'nust';
+image.src = innerContainerDiv.image;
+image.alt = innerContainerDiv.alt;
 
 const university = document.createElement('h2');
 university.className = 'university';
-university.innerText = 'namibia univesity of science and technoligy';
+university.innerText = innerContainerDiv.university;
 
 imageContainer.append(image, university);
 console.log(imageContainer);
@@ -45,14 +45,14 @@ faculty.className = 'faculty';
 faculty.innerText = 'faculty:';
 const facult = document.createElement('span');
 facult.className = 'facult'
-facult.innerText = ' engineering';
+facult.innerText = ' '+innerContainerDiv.faculty;
 
 const likes = document.createElement('p');
 likes.className = 'likes';
 likes.innerText = 'Likes:';
 const like = document.createElement('span');
 like.innerText = 'like';
-like.innerText = ' 12';
+like.innerText = ' '+innerContainerDiv.likes;
 
 faculty.append(facult);
 likes.append(like);
@@ -69,14 +69,14 @@ comments.className = 'comments';
 comments.innerText = 'comments:';
 const comment = document.createElement('span');
 comment.className = 'comment:';
-comment.innerText = ' comment vous allez';
+comment.innerText = ' '+innerContainerDiv.comments;
 
 const text = document.createElement('p');
 text.className = 'text';
 text.innerText = 'text:';
 const texts = document.createElement('span');
 texts.className = 'texts';
-texts.innerText = ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed labore amet magnam unde odio sequi temporibus saepe repudiandae nobis ab hic a repellat itaque deserunt, tenetur fugiat dolores suscipit dicta?';
+texts.innerText = ' '+innerContainerDiv.text;
 
 comments.append(comment);
 text.append(texts);
