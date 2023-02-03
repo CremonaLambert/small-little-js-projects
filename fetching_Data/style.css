@@ -22,6 +22,11 @@ header{
     color: rgb(158, 195, 195);
 }
 
+/* .card{
+    border: 2px solid yellow;
+    height: 700px;
+} */
+
 
 .image_container{
     border: 2px solid rgb(7, 151, 24);

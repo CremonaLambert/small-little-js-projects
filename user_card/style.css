@@ -1,0 +1,27 @@
+.card_container {
+    border: 1px solid #000;
+    width: 300px;
+    height: 350px;
+}
+
+img{
+    width: 180px;
+    height: 180px;
+    border: 2px solid purple;
+    border-radius: 50%;
+}
+
+i {
+    padding: 5px;
+}
+
+.icon_container{
+    border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.envelope, .fa_phone, .venus_mars{
+    padding-bottom: 2px;
+}
+
