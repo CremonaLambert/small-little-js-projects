@@ -66,21 +66,17 @@ i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 12px; */
     height: 250px;
     width: 280px;
     margin: 5px;
 }
 .icon_container{
-    /* border: 2px solid #0bd61c; */
     border-radius: 8px;
     width: 280px;
     display: flex;
     flex-direction: column;
     padding: 10px;
     margin:5px;
-    /* background-image: linear-gradient(180deg, rgb(134, 8, 252), yellow); */
     box-shadow: 0px 0px 10px 0px #fff;
-    /* background-image: linear-gradient(180deg, rgb(172, 7, 150), rgb(24, 2, 29)); */
 }
 
