@@ -45,12 +45,17 @@ i {
 }
 .name {
     padding-top: 18px;
-    color: #eee;
+    color: rgb(99, 249, 249);
 }
- 
-.envelope, .fa_phone, .venus_mars{
-    padding-bottom: 2px;
+
+span{
+    color: rgb(99, 249, 249);
+}
+
+
+#envelope, #phone, #venus {
     color: #eee;
+    padding-bottom: 5px;
 }
 
 .box {
