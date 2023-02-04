@@ -1,8 +1,8 @@
 fetch("https://dummyjson.com/users").then(function(response){
     return response.json();
 }).then(function(data){
-    console.log(data.users);
-    console.table(data.users);
+    // console.log(data.users);
+    // console.table(data.users);
 
    /* <div class="card_container">
         <div class="image_and_username">
@@ -67,7 +67,7 @@ fetch("https://dummyjson.com/users").then(function(response){
                 <span class="email">cremonalambert@gmail.com</span>
             </div>
 
-            <div class="fa_phone">
+           <div class="fa_phone">
                 <i class="fa-solid fa-phone" id ="phone"></i>
                 <span class="phone">+123-123-123-123</span>
             </div>
@@ -76,11 +76,45 @@ fetch("https://dummyjson.com/users").then(function(response){
                 <i class="fa-solid fa-venus-mars" id ="venus"></i>
                 <span class="gender">male</span>
             </div> */
-    const envelopeContainer = document.createElement('div');
-    envelopeContainer.className = 'envelope';
+    const envelopeContainer = document.createElement('div');  // envelope div comtainer
+    envelopeContainer.className = 'envelope';                 //     
 
-    const iconEnvelope = document.createElement('i');
-    iconEnvelope.id = 'envelope';
+
+    const EnvelopeIcon = document.createElement('i');         // envelope icon 
+    EnvelopeIcon.className = 'fa-solid fa-envelope';           //
+    EnvelopeIcon.id = 'envelope'; 
+
+
+    const emailSpan = document.createElement('span');       // email span section
+    emailSpan.className = 'email';                          //
+    emailSpan.innerText = 'bertierclarck@gmail.com';        //
+    //--------------------------------------------------------------------->
+
+    envelopeContainer.append(EnvelopeIcon, emailSpan);         // envelope append (1)
+    console.log(envelopeContainer);                            //
+    //--------------------------------------------------------------------->
+
+    const phoneContainer = document.createElement('div');  // phone div contenair
+    phoneContainer.className = 'fa_phone';                 //
+
+    
+    const iconPhone = document.createElement('i');        // phone icon
+    iconPhone.className ='fa-solid fa-phone';              //
+    iconPhone.id = 'phone';
+
+    const phoneSpan = document.createElement('span');     // phone span
+    phoneSpan.className = 'phone';                         //
+    phoneSpan.innerText = '+123-123-123-123';
+    //-------------------------------------------------------------------->    
+
+    phoneContainer.append(iconPhone, phoneSpan);    // phone append (2)
+    console.log(phoneContainer);
+
+    //-------------------------------------------------------------------->
+    
+
+
+
 
 
 
