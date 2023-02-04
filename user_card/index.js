@@ -29,7 +29,7 @@ fetch("https://dummyjson.com/users").then(function(response){
     </div>*/
 
 
-    const cardContainer = document.createElement('div'); // outer container
+    const cardContainer = document.createElement('div'); // outer most container
     cardContainer.className = 'card_container';          //
 
 //-----------------------start 1st box--------------------
@@ -57,7 +57,7 @@ fetch("https://dummyjson.com/users").then(function(response){
 
 //---------------------------------------------------------------->
 
-    const iconContainer = document.createElement('div');
+    const iconContainer = document.createElement('div');           // icon container
     iconContainer.className = 'icon_container';
 
 
@@ -111,9 +111,44 @@ fetch("https://dummyjson.com/users").then(function(response){
     console.log(phoneContainer);
 
     //-------------------------------------------------------------------->
-    
+    /*<div class="venus_mars">
+        <i class="fa-solid fa-venus-mars" id ="venus"></i>
+        <span class="gender">male</span>
+    </div> */
+
+    const genderContainer = document.createElement('div');     //gender div container
+    genderContainer.className = 'venus_mars';                   //
+
+    const genderIcon = document.createElement('i');            // venus icon
+    genderIcon.className = 'fa-solid fa-venus-mars';            //
+    genderIcon.id = 'venus';
+
+    const genderSpan = document.createElement('span');        // gender span
+    genderSpan.className = 'gender';                          //
+    genderSpan.innerText = 'mokolo';
+
+    //------------------------------------------------------------------------->
+
+    genderContainer.append(genderIcon, genderSpan);             //gender append (3)
+    console.log(genderContainer);
+
+    //------------------------------------------------------------------------->
 
 
+    //-----------envelope append (1)---phone append (2)-------//gender append (3)------> in to iconContainer
+
+    iconContainer.append(envelopeContainer, phoneContainer, genderContainer);     // icon container full
+    console.log(iconContainer);
+    //------------------------------------------------------------------------------------------>
+
+    //------------------finally icon container full and image and username ------> in to the outer most container called card container
+
+    cardContainer.append(imageAndUsername, iconContainer);
+    console.log(cardContainer);
+
+    // now i should add a queryselector in order for me to be able to call it later 
+
+    document.querySelector('.container').append(cardContainer);
 
 
 
