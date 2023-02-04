@@ -4,7 +4,13 @@ fetch("https://dummyjson.com/users").then(function(response){
     // console.log(data.users);
     // console.table(data.users);
 
-   /* <div class="card_container">
+    for (let containerDiv of data.users){
+
+        showContainerCard(containerDiv)
+    };
+
+    function showContainerCard(containerDiv){
+        /* <div class="card_container">
         <div class="image_and_username">
             <img src="https://robohash.org/hicveldicta.png" alt="cremona">
             <h2 class="name">cremona lambert</h2>
@@ -44,12 +50,12 @@ fetch("https://dummyjson.com/users").then(function(response){
 
 
     const image = document.createElement('img');            // image only
-    image.src = 'https://robohash.org/hicveldicta.png';     //
-    image.alt = 'cremona';                                  //
+    image.src = containerDiv.image;     //
+    image.alt = containerDiv.username;                                  //
 
     const userName = document.createElement('h2');         // username first and lastname
     userName.className = 'name';                           //
-    userName.innerText = 'cremona lambert';                //
+    userName.innerText = containerDiv.firstName + ' ' + containerDiv.lastName;                //
 //---------------------end---------------------------------------->
 
     imageAndUsername.append(image, userName);           // image and name in one box
@@ -87,7 +93,7 @@ fetch("https://dummyjson.com/users").then(function(response){
 
     const emailSpan = document.createElement('span');       // email span section
     emailSpan.className = 'email';                          //
-    emailSpan.innerText = 'bertierclarck@gmail.com';        //
+    emailSpan.innerText = containerDiv.email;        //
     //--------------------------------------------------------------------->
 
     envelopeContainer.append(EnvelopeIcon, emailSpan);         // envelope append (1)
@@ -104,7 +110,7 @@ fetch("https://dummyjson.com/users").then(function(response){
 
     const phoneSpan = document.createElement('span');     // phone span
     phoneSpan.className = 'phone';                         //
-    phoneSpan.innerText = '+123-123-123-123';
+    phoneSpan.innerText = containerDiv.phone;
     //-------------------------------------------------------------------->    
 
     phoneContainer.append(iconPhone, phoneSpan);    // phone append (2)
@@ -125,7 +131,7 @@ fetch("https://dummyjson.com/users").then(function(response){
 
     const genderSpan = document.createElement('span');        // gender span
     genderSpan.className = 'gender';                          //
-    genderSpan.innerText = 'mokolo';
+    genderSpan.innerText = containerDiv.gender;
 
     //------------------------------------------------------------------------->
 
@@ -153,6 +159,9 @@ fetch("https://dummyjson.com/users").then(function(response){
 
 
 
+    };
+
+   
 
 
 
