@@ -6,12 +6,11 @@
 }
 
 body{
-    background-image: linear-gradient(180deg, rgb(91, 32, 241), rgb(24, 2, 29)); 
-    background-image: linear-gradient(180deg, rgb(134, 8, 252), yellow); 
-    background: linear-gradient(-45deg, #170633, #cc8fe8, #23a6d5, #23d5ab);
+    /* background-image: linear-gradient(180deg, rgb(91, 32, 241), rgb(24, 2, 29));  */
+    /* background-image: linear-gradient(180deg, rgb(134, 8, 252), yellow);  */
+    background: linear-gradient(-45deg, #411f77, #7a7489, #6b3d75, #358b77);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
 }
 
 @keyframes gradient {
@@ -27,12 +26,12 @@ body{
 }
 
 .container{
-    border: 1px solid #000;
-    max-width: 1200px;
+    /* border: 1px solid #000; */
+    max-width: 1300px;
     margin: 90px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px 1fr));
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
     padding: 10px;
 }
 
@@ -41,7 +40,8 @@ body{
     border-radius: 8px;
     width: 305px;
     height: 380px;
-    background-color: #500245;  
+    background-color: #500245;
+    margin: 0 auto;  
 }
 
 
@@ -56,6 +56,7 @@ img{
 }
 
 i {
+
     padding: 5px;
 }
 .name {
@@ -88,7 +89,7 @@ span{
     align-items: center;
     height: 250px;
     width: 280px;
-    margin: 5px;
+    margin: 5px auto;
 }
 .icon_container{
     border-radius: 8px;
@@ -96,7 +97,44 @@ span{
     display: flex;
     flex-direction: column;
     padding: 10px;
-    margin:5px;
-    box-shadow: 0px 0px 10px 0px #fff;
+    margin:5px auto;
+    /* box-shadow: 0px 0px 10px 0px #fff; */
 }
+
+.search_box{
+    /* border: 1px solid rebeccapurple; */
+    border-radius: 20px;
+    width: 500px;
+    display: flex;
+    margin: 20px auto;
+
+}
+ input{
+    text-align: center;
+    height: 50px;
+    width: 320px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+ }
+
+ .icon_box{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    border: 1px solid #000;
+    height: 50px;
+    width: 50px;
+    /* border-radius: 50%; */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* background-color: #500245; */
+    background-image: linear-gradient(180deg, rgb(134, 8, 252), yellow);
+ }
+
+ #loop {
+    margin: 0 auto;
+    /* color: #eee; */
+    color: rgb(99, 249, 249);
+ }
 
