@@ -158,42 +158,6 @@ fetch("https://dummyjson.com/users").then(function(response){
 
     };
 
-   
-
-
-    usernotfound()
-    function usernotfound (){
-        /*
-     <div class="no_user_found">
-        <h1 class="error">404</h1>                               in oder for you to display this section go up befor the for loop section
-        <p class="not_found">sorry!...I did not found</p>
-    </div>
-    */
-    const errorBox = document.createElement('div');
-    errorBox.className = 'error_box';
-    errorBox.style.display = 'none';
-    
-    const noUserFound = document.createElement('div');
-    noUserFound.className = 'no_user_found';
-    // noUserFound.style.display = 'none';
-    
-    const error404 = document.createElement('h1');
-    error404.className = 'error';
-    error404.innerText = '404';
-    
-    const errorMessage = document.createElement('p');
-    errorMessage.className = 'not_found';
-    errorMessage.innerText = 'sorry!...I did not found';
-    
-    noUserFound.append(error404, errorMessage);
-    
-    document.querySelector('.container').append(noUserFound);
-    
-    }
-
-
-
-
 
 });
 
@@ -261,13 +225,14 @@ typeToSearch.addEventListener('keyup', function(e){
             didnotfound = false;                                // -----then !!!here!!! if you get the data
 
         }else{
+
             nameOfUser.style.display = 'none';
         }
     }
 
 
     if(didnotfound){
-        document.querySelector('.error_box').style.display = 'clock';
+        document.querySelector('.error_box').style.display = 'block';
 
     }else{
         document.querySelector('.error_box').style.display = 'none';
@@ -276,30 +241,34 @@ typeToSearch.addEventListener('keyup', function(e){
 });
 
 
-// usernotfound()
-// function usernotfound (){
-//     /*
-//  <div class="no_user_found">
-//     <h1 class="error">404</h1>                               in oder for you to display this section go up befor the for loop section
-//     <p class="not_found">sorry!...I did not found</p>
-// </div>
-// */
-// const errorBox = document.createElement('div');
-// errorBox.className = 'error_box';
+usernotfound()
+    function usernotfound (){
+        /*
+     <div class="no_user_found">
+        <h1 class="error">404</h1>                               in oder for you to display this section go up befor the for loop section
+        <p class="not_found">sorry!...I did not found</p>
+    </div>
+    */
+    const errorBox = document.createElement('div');
+    errorBox.className = 'error_box';
+    errorBox.style.display = 'none';
+    
+    const noUserFound = document.createElement('div');
+    noUserFound.className = 'no_user_found';
+    // noUserFound.style.display = 'none';
+    
+    const error404 = document.createElement('h1');
+    error404.className = 'error';
+    error404.innerText = '404';
+    
+    const errorMessage = document.createElement('p');
+    errorMessage.className = 'not_found';
+    errorMessage.innerText = 'sorry!...I did not found';
+    
+    noUserFound.append(error404, errorMessage);
 
-// const noUserFound = document.createElement('div');
-// noUserFound.className = 'no_user_found';
-
-// const error404 = document.createElement('h1');
-// error404.className = 'error';
-// error404.innerText = '404';
-
-// const errorMessage = document.createElement('p');
-// errorMessage.className = 'not_found';
-// errorMessage.innerText = 'sorry!...I did not found';
-
-// noUserFound.append(error404, errorMessage);
-
-// document.querySelector('.container').append(noUserFound);
-
-// }
+    errorBox.append(noUserFound);
+    
+    document.querySelector('.container').append(errorBox);
+    
+    }
