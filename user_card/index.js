@@ -59,7 +59,7 @@ fetch("https://dummyjson.com/users").then(function(response){
 //---------------------end---------------------------------------->
 
     imageAndUsername.append(image, userName);           // image and name in one box
-    console.log(imageAndUsername);                      //
+    // console.log(imageAndUsername);                      //
 
 //---------------------------------------------------------------->
 
@@ -97,7 +97,7 @@ fetch("https://dummyjson.com/users").then(function(response){
     //--------------------------------------------------------------------->
 
     envelopeContainer.append(EnvelopeIcon, emailSpan);         // envelope append (1)
-    console.log(envelopeContainer);                            //
+    // console.log(envelopeContainer);                            //
     //--------------------------------------------------------------------->
 
     const phoneContainer = document.createElement('div');  // phone div contenair
@@ -114,7 +114,7 @@ fetch("https://dummyjson.com/users").then(function(response){
     //-------------------------------------------------------------------->    
 
     phoneContainer.append(iconPhone, phoneSpan);    // phone append (2)
-    console.log(phoneContainer);
+    // console.log(phoneContainer);
 
     //-------------------------------------------------------------------->
     /*<div class="venus_mars">
@@ -136,7 +136,7 @@ fetch("https://dummyjson.com/users").then(function(response){
     //------------------------------------------------------------------------->
 
     genderContainer.append(genderIcon, genderSpan);             //gender append (3)
-    console.log(genderContainer);
+    // console.log(genderContainer);
 
     //------------------------------------------------------------------------->
 
@@ -144,29 +144,162 @@ fetch("https://dummyjson.com/users").then(function(response){
     //-----------envelope append (1)---phone append (2)-------//gender append (3)------> in to iconContainer
 
     iconContainer.append(envelopeContainer, phoneContainer, genderContainer);     // icon container full
-    console.log(iconContainer);
+    // console.log(iconContainer);
     //------------------------------------------------------------------------------------------>
 
     //------------------finally icon container full and image and username ------> in to the outer most container called card container
 
     cardContainer.append(imageAndUsername, iconContainer);
-    console.log(cardContainer);
+    // console.log(cardContainer);
 
     // now i should add a queryselector in order for me to be able to call it later 
 
-    document.querySelector('.container').append(cardContainer);
-
-
-
+    document.querySelector('.container').append(cardContainer)
 
     };
 
    
 
 
+    usernotfound()
+    function usernotfound (){
+        /*
+     <div class="no_user_found">
+        <h1 class="error">404</h1>                               in oder for you to display this section go up befor the for loop section
+        <p class="not_found">sorry!...I did not found</p>
+    </div>
+    */
+    const errorBox = document.createElement('div');
+    errorBox.className = 'error_box';
+    errorBox.style.display = 'none';
+    
+    const noUserFound = document.createElement('div');
+    noUserFound.className = 'no_user_found';
+    // noUserFound.style.display = 'none';
+    
+    const error404 = document.createElement('h1');
+    error404.className = 'error';
+    error404.innerText = '404';
+    
+    const errorMessage = document.createElement('p');
+    errorMessage.className = 'not_found';
+    errorMessage.innerText = 'sorry!...I did not found';
+    
+    noUserFound.append(error404, errorMessage);
+    
+    document.querySelector('.container').append(noUserFound);
+    
+    }
 
 
 
 
 
 });
+
+/*
+    <div class="search_box">
+        <input type="text" id="user_search" placeholder="search">
+        <div class="icon_box">
+            <i class="fa-solid fa-magnifying-glass" id="loop"></i>
+        </div>
+    </div>
+*/
+
+const searchBox = document.createElement('div');     //search outer most container
+searchBox.className = 'search_box';
+
+const typeToSearch = document.createElement('input');   // input 
+typeToSearch.type = 'text';
+typeToSearch.id = 'user_search';
+typeToSearch.placeholder = 'search';
+
+const iconBox = document.createElement('div');      // icon inner box
+iconBox.className = 'icon_box';
+
+const iconSearch = document.createElement('i');           // icon search 
+iconSearch.className = 'fa-solid fa-magnifying-glass';
+iconSearch.id = 'loop';
+
+//----------------------append icon search into ---> icon inner box ---------------->
+iconBox.append(iconSearch);
+//---------------------------------------------------------------------------------->
+
+
+//----append --icon inner box and input into ----> search outer most container------------->
+
+document.querySelector('.search_box').append(typeToSearch, iconBox);
+
+//--------------------------------------------------------------------------------->
+
+typeToSearch.addEventListener('keyup', function(e){
+    const keyWord = e.target.value.toLowerCase();
+    // console.log(e.target.value)
+
+    const findUsers = document.querySelectorAll('.card_container');   // this is how i will get all the data inside each card container
+
+
+
+        let didnotfound = true;   //-----in order to display the error !!!here!!!
+
+
+    for (let nameOfUser of findUsers){            // using the for loop to access each children element 
+        // console.log(nameOfUser.children)
+        const myUser = nameOfUser.children[0].innerText.toLowerCase();
+
+        const myEmail = nameOfUser.children[1].innerText.toLowerCase();
+
+        const myphone = nameOfUser.children[1].innerText.toLowerCase();
+
+        const mygender = nameOfUser.children[1].innerText.toLowerCase();
+        // console.log(myUser, myEmail, myphone, mygender);
+
+        if(myUser.includes(keyWord) || myEmail.includes(keyWord) || myphone.includes(keyWord) || mygender.includes(keyWord)){  // this is how how search for what i am looking for according to my keyword
+            // console.log('Hey!...Cremona I got it');
+
+            nameOfUser.style.display = 'block';
+            didnotfound = false;                                // -----then !!!here!!! if you get the data
+
+        }else{
+            nameOfUser.style.display = 'none';
+        }
+    }
+
+
+    if(didnotfound){
+        document.querySelector('.error_box').style.display = 'clock';
+
+    }else{
+        document.querySelector('.error_box').style.display = 'none';
+    }
+    
+});
+
+
+// usernotfound()
+// function usernotfound (){
+//     /*
+//  <div class="no_user_found">
+//     <h1 class="error">404</h1>                               in oder for you to display this section go up befor the for loop section
+//     <p class="not_found">sorry!...I did not found</p>
+// </div>
+// */
+// const errorBox = document.createElement('div');
+// errorBox.className = 'error_box';
+
+// const noUserFound = document.createElement('div');
+// noUserFound.className = 'no_user_found';
+
+// const error404 = document.createElement('h1');
+// error404.className = 'error';
+// error404.innerText = '404';
+
+// const errorMessage = document.createElement('p');
+// errorMessage.className = 'not_found';
+// errorMessage.innerText = 'sorry!...I did not found';
+
+// noUserFound.append(error404, errorMessage);
+
+// document.querySelector('.container').append(noUserFound);
+
+// }
