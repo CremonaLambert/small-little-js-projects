@@ -13,9 +13,8 @@ console.log(firstPosts);
 
 function topNposts(n, field, posts){
  let sum = n + field + posts;
- console.log(sum);
- console.table(sum)
 }
-topNposts(firstPosts.sort((a,b) => a.uuid - b.uuid).[0], 
+topNposts(firstPosts.sort((a,b) => a.uuid - b.uuid), 
     firstPosts.sort((a, b) => b.likes - a.likes), 
     firstPosts.sort((a, b) => b.comments - a.comments));
+
